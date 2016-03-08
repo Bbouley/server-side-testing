@@ -32,6 +32,7 @@ describe('API routes', function() {
             chai.request(server)
             .get('/api/shows')
             .end(function(err, res) {
+                console.log('response : ', res.body);
                 res.should.have.status(200);
                 res.should.be.json;
                 res.body.should.be.a('array');
